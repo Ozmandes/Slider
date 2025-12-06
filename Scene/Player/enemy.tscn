@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bb3vtlfovpr0y"]
 
-[ext_resource type="Script" path="res://Scene/Player/enemy.gd" id="1_lf78k"]
-[ext_resource type="Shader" path="res://Scene/Player/marker.gdshader" id="1_uag0e"]
+[ext_resource type="Script" uid="uid://b8ltolco5bksl" path="res://Scene/Player/enemy.gd" id="1_lf78k"]
+[ext_resource type="Shader" uid="uid://duerdiaf2xbhb" path="res://assert/Shader/enemy_border.gdshader" id="1_uag0e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8s2pu"]
 shader = ExtResource("1_uag0e")
@@ -29,6 +29,7 @@ emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 1.0
 emission_ring_radius = 32.0
 emission_ring_inner_radius = 30.0
+emission_ring_cone_angle = 90.0
 angle_min = -180.0
 angle_max = 180.0
 spread = 180.0
@@ -80,20 +81,20 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_8s2pu")
 amount = 32
-process_material = SubResource("ParticleProcessMaterial_gihe2")
 lifetime = 3.0
 fixed_fps = 60
 trail_enabled = true
 trail_sections = 2
 trail_section_subdivisions = 1
+process_material = SubResource("ParticleProcessMaterial_gihe2")
 
 [node name="Body" type="GPUParticles2D" parent="Visual"]
 unique_name_in_owner = true
 amount = 64
-process_material = SubResource("ParticleProcessMaterial_4ipn7")
 lifetime = 2.0
 explosiveness = 0.2
 fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_4ipn7")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true

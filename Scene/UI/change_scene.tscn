@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://74qodqlakjxk"]
 
-[ext_resource type="Script" path="res://Scene/UI/change_scene.gd" id="1_wfwu6"]
-[ext_resource type="Shader" path="res://Scene/UI/back_ground.gdshader" id="2_gta65"]
+[ext_resource type="Script" uid="uid://bvbccod2vikgy" path="res://Scene/UI/change_scene.gd" id="1_wfwu6"]
+[ext_resource type="Shader" uid="uid://d4lwg08b4pbr5" path="res://assert/Shader/change_scene.gdshader" id="2_gta65"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ude0p"]
 shader = ExtResource("2_gta65")

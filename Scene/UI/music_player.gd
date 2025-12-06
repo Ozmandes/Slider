@@ -7,7 +7,6 @@ func _ready():
 	timer.timeout.connect(on_timer_timeout)
 
 
-
 func on_music_finished():
 	timer.start()
 

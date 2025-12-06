@@ -18,6 +18,7 @@ func decelerate():
 func pause():
 	velocity = Vector2.ZERO
 
+
 func move(character_body: CharacterBody2D):
 	character_body.velocity = velocity
 	character_body.move_and_slide()

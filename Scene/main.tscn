@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://dmusdxi7gpik6"]
 
-[ext_resource type="Script" path="res://Scene/main.gd" id="1_1uxxj"]
+[ext_resource type="Script" uid="uid://c08gu36inmer8" path="res://Scene/main.gd" id="1_1uxxj"]
 [ext_resource type="PackedScene" uid="uid://c21lyvai7welo" path="res://Scene/UI/back_ground.tscn" id="1_4q8kg"]
 [ext_resource type="PackedScene" uid="uid://1ukxyy0pgbxw" path="res://Scene/Player/player.tscn" id="2_owr28"]
 [ext_resource type="PackedScene" uid="uid://c2f1f2dlrveog" path="res://Scene/UI/fore_ground.tscn" id="2_utnso"]
@@ -13,6 +13,14 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m1q2r"]
 blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_aroju"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eolhy"]
+gradient = SubResource("Gradient_aroju")
+width = 1
+fill_to = Vector2(0, 1)
 
 [sub_resource type="Curve" id="Curve_7nals"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.33129, 0.0, 0, 0]
@@ -42,14 +50,6 @@ scale_curve = SubResource("CurveTexture_51o8v")
 alpha_curve = SubResource("CurveTexture_rpkja")
 hue_variation_min = -0.95
 hue_variation_max = 0.95
-
-[sub_resource type="Gradient" id="Gradient_aroju"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_eolhy"]
-gradient = SubResource("Gradient_aroju")
-width = 1
-fill_to = Vector2(0, 1)
 
 [node name="Main" type="Node2D" groups=["main"]]
 script = ExtResource("1_1uxxj")
@@ -139,7 +139,6 @@ unique_name_in_owner = true
 material = SubResource("CanvasItemMaterial_m1q2r")
 emitting = false
 amount = 128
-process_material = SubResource("ParticleProcessMaterial_6hdh5")
 texture = SubResource("GradientTexture2D_eolhy")
 lifetime = 5.0
 one_shot = true
@@ -148,6 +147,7 @@ explosiveness = 0.5
 randomness = 1.0
 fixed_fps = 120
 trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_6hdh5")
 
 [node name="ScoreBottom" type="MarginContainer" parent="Information"]
 unique_name_in_owner = true
@@ -215,7 +215,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource("5_it001")
-theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "0:00"
 fit_content = true

@@ -19,6 +19,8 @@ extends CharacterBody2D
 
 signal player_die
 
+var dash_flag: bool = false
+
 
 func _ready():
 	if player_id:
@@ -32,6 +34,10 @@ func _ready():
 
 
 func _process(_delta):
+	if dash_flag:
+		velocity_component.move(self)
+		return
+	
 	var movement_vector = get_movement_vector()
 	var direction = movement_vector.normalized()
 	
@@ -43,6 +49,13 @@ func _process(_delta):
 	
 	head.position = velocity.normalized() * Vector2(32, 32)
 	head.rotation = velocity.angle() + PI/2
+
+
+func _input(_event: InputEvent) -> void:
+	if player_id and not dash_flag and Input.is_action_just_pressed("dash1"):
+		dash()
+	elif not player_id and not dash_flag and Input.is_action_just_pressed("dash2"):
+		dash()
 
 
 func get_movement_vector():
@@ -60,6 +73,18 @@ func get_movement_vector():
 	movement_vector = Vector2(x_movement, y_movement)
 	
 	return movement_vector
+
+
+func dash():
+	dash_flag = true
+	velocity_component.velocity = self.velocity.normalized() * velocity_component.max_speed * 2
+	velocity_component.move(self)
+	
+	await get_tree().create_timer(0.12).timeout
+	velocity_component.velocity = self.velocity.normalized() * velocity_component.max_speed * 0.2
+	
+	await get_tree().create_timer(0.08).timeout
+	dash_flag = false
 
 
 func show_hit():

@@ -1,12 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6qvxo6i2s1bs"]
 
-[ext_resource type="Shader" path="res://Scene/UI/water_alternative.gdshader" id="1_amnof"]
-[ext_resource type="Script" path="res://Scene/UI/main_menu.gd" id="1_vnkbl"]
+[ext_resource type="Shader" uid="uid://cpam8dlvxiucc" path="res://assert/Shader/in_game_background.gdshader" id="1_amnof"]
+[ext_resource type="Script" uid="uid://byixqokba84rt" path="res://Scene/UI/main_menu.gd" id="1_vnkbl"]
 [ext_resource type="PackedScene" uid="uid://ctpcriqlcgahx" path="res://Scene/UI/option_menu.tscn" id="2_cr4ye"]
-[ext_resource type="Shader" path="res://Scene/UI/high_light.gdshader" id="2_i033e"]
+[ext_resource type="Shader" uid="uid://b8b1iy6bok0uj" path="res://assert/Shader/scan_line.gdshader" id="2_i033e"]
 [ext_resource type="PackedScene" uid="uid://74qodqlakjxk" path="res://Scene/UI/change_scene.tscn" id="3_ayx03"]
 [ext_resource type="Theme" uid="uid://dh8dblbdpjymt" path="res://Scene/UI/theme.tres" id="3_vwslk"]
 [ext_resource type="PackedScene" uid="uid://c2f1f2dlrveog" path="res://Scene/UI/fore_ground.tscn" id="3_yfhqq"]
+
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m7h04"]
 shader = ExtResource("1_amnof")

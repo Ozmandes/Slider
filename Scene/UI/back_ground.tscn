@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://c21lyvai7welo"]
 
-[ext_resource type="Shader" path="res://Scene/UI/border.gdshader" id="1_hta1s"]
-[ext_resource type="Shader" path="res://Scene/UI/water_alternative.gdshader" id="2_vkd1s"]
-[ext_resource type="Shader" path="res://Scene/UI/high_light.gdshader" id="3_qigr3"]
+[ext_resource type="Shader" uid="uid://bqb2jowrxchb3" path="res://assert/Shader/border.gdshader" id="1_hta1s"]
+[ext_resource type="Shader" uid="uid://cpam8dlvxiucc" path="res://assert/Shader/in_game_background.gdshader" id="2_vkd1s"]
+[ext_resource type="Shader" uid="uid://b8b1iy6bok0uj" path="res://assert/Shader/scan_line.gdshader" id="3_qigr3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jihva"]
 shader = ExtResource("1_hta1s")
@@ -74,28 +74,28 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Water" type="ColorRect" parent="ColorRect/MarginContainer"]
+[node name="Background" type="ColorRect" parent="ColorRect/MarginContainer"]
 material = SubResource("ShaderMaterial_wc0pl")
 layout_mode = 2
 
-[node name="HighLight" type="ColorRect" parent="ColorRect/MarginContainer"]
+[node name="ScanLine" type="ColorRect" parent="ColorRect/MarginContainer"]
 material = SubResource("ShaderMaterial_enbng")
 layout_mode = 2
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Border" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
 position = Vector2(640, 8)
 shape = SubResource("RectangleShape2D_ue7ib")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border"]
 position = Vector2(640, 712)
 shape = SubResource("RectangleShape2D_ohnvw")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Border"]
 position = Vector2(1272, 360)
 shape = SubResource("RectangleShape2D_u32ox")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Border"]
 position = Vector2(8, 360)
 shape = SubResource("RectangleShape2D_o3mcn")

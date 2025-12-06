@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2f1f2dlrveog"]
 
-[ext_resource type="Shader" path="res://Scene/UI/crt_moniter.gdshader" id="1_lj84v"]
+[ext_resource type="Shader" uid="uid://5lgxpad3jk4j" path="res://assert/Shader/crt_moniter.gdshader" id="1_lj84v"]
+
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_08brd"]
 shader = ExtResource("1_lj84v")
